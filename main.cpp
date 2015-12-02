@@ -6,20 +6,22 @@
 //  Copyright © 2015年 李晓晋. All rights reserved.
 //
 #include <iostream>
-
-
-    int main(int argc, const char * argv[]) {
-        // insert code here...
-        int a[4];
-        int *p;
-        a[0]=10;
-        a[1]=20;
-        a[2]=30;
-        a[3]=40;
-        p=a;
-        printf("&a[0]=%x &a[1]=%x &a[2]=%x &a[3]=%x a=%x \n",&a[0],&a[1],&a[2],&a[3],a);
-        printf("a[0]=%d \n",*(p+2));
-        return 0;
+int main(int argc, const char * argv[]) {
+    // insert code here...
+    int a[3]={1,2,3};
+    printf("a[0]=%d a[1]=%d a[2]=%d\n", a[0],a[1],a[2]);
+    int b[4];
+    printf("%x  %x\n",a,b);
+    int i;
+    for(i=1;i<10;i++)
+    {
+        b[i]=i;
     }
-
+    printf("a[0]=%d a[1]=%d a[2]=%d\n",a[0],a[1],a[2]);
+    for(i=1;i<10;i++)
+    {
+         printf("%d\n",b[i]);
+    }
+    return 0;
+}
 
