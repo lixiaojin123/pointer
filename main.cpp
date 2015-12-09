@@ -19,10 +19,10 @@ int main(int argc,const char *argv[]){
     scanf("%s%d",B.name,&B.age);
     scanf("%s%d",C.name,&C.age);
     scanf("%s%d",D.name,&D.age);
-    printf("%s %d",A.name,A.age);
-    printf("%s %d",B.name,B.age);
-    printf("%s %d",C.name,C.age);
-    printf("%s %d",D.name,D.age);
-
+    A.next=&B;
+    B.next=&C;
+    C.next=&D;
+    D.next=0;
+    printf("%s %d\n",D.name,D.age);
     return 0;
 }
