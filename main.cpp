@@ -15,6 +15,7 @@ struct student
 int main(int argc,const char *argv[]){
     //insert code here...
     student A,B,C,D;
+    student *p,*q,*head;
     scanf("%s%d",A.name,&A.age);
     scanf("%s%d",B.name,&B.age);
     scanf("%s%d",C.name,&C.age);
@@ -23,6 +24,13 @@ int main(int argc,const char *argv[]){
     B.next=&C;
     C.next=&D;
     D.next=0;
-    printf("%s %d\n",D.name,D.age);
+    head=&A;
+    p=head;
+    while(p!=0)
+    {
+        printf("%s %d p=%x\n",p->name,p->age,p);
+        p=p->next;
+    }
+    
     return 0;
 }
